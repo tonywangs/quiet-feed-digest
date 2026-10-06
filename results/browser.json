@@ -1,0 +1,25 @@
+{
+  "chromium": "145.0.7632.6",
+  "node": "v24.20.0",
+  "playwright": "1.58.2",
+  "external_networking": "offline context; only named local report navigation allowed; external requests aborted; service workers blocked",
+  "automatic_remote_requests": 0,
+  "page_errors": 0,
+  "checks": [
+    "source and status filters",
+    "before/after revision",
+    "Enter and Space disclosure keys",
+    "Tab and native select keys",
+    "visible 3px focus",
+    "320px viewport without overflow",
+    "hostile content inert",
+    "200-card cap",
+    "no-JavaScript reading"
+  ],
+  "elements": {
+    "sample": 134,
+    "hostile": 95,
+    "bounded": 8437
+  },
+  "maximum_tested_cards": 200
+}

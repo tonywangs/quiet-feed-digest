@@ -1,0 +1,83 @@
+{
+  "bounded_250_revisions": {
+    "artifacts": {
+      "index.html": {
+        "bytes": 355324,
+        "sha256": "43f5bc765728de925dcc6c1a5f78d08d91a43c837bbc0764bb09a808da7ec970"
+      },
+      "report.json": {
+        "bytes": 304895,
+        "sha256": "8875b26c2faaf12aa0d554fe352ce7f72a258cd625671b725bfccd31a7f95b24"
+      }
+    },
+    "elapsed_seconds": 0.2726785521954298,
+    "exit_code": 0,
+    "peak_rss_kib": 26224
+  },
+  "browser": {
+    "automatic_remote_requests": 0,
+    "checks": [
+      "source and status filters",
+      "before/after revision",
+      "Enter and Space disclosure keys",
+      "Tab and native select keys",
+      "visible 3px focus",
+      "320px viewport without overflow",
+      "hostile content inert",
+      "200-card cap",
+      "no-JavaScript reading"
+    ],
+    "chromium": "145.0.7632.6",
+    "elements": {
+      "bounded": 8437,
+      "hostile": 95,
+      "sample": 134
+    },
+    "external_networking": "offline context; only named local report navigation allowed; external requests aborted; service workers blocked",
+    "maximum_tested_cards": 200,
+    "node": "v24.20.0",
+    "page_errors": 0,
+    "performed": true,
+    "playwright": "1.58.2"
+  },
+  "deterministic_repeat": true,
+  "expat": "expat_2.6.1",
+  "hostile": {
+    "artifacts": {
+      "index.html": {
+        "bytes": 10271,
+        "sha256": "fd955bf18097b8cedaf83d52d0bf3d854aa0a625bf430a19e1abba5b6cc14629"
+      },
+      "report.json": {
+        "bytes": 5329,
+        "sha256": "9169794fae3e320aad35eaaf7ecaef9adeb63859de82ace3a9bd057b1ea11551"
+      }
+    },
+    "elapsed_seconds": 0.1822495637461543,
+    "exit_code": 2,
+    "peak_rss_kib": 21600
+  },
+  "input_hashes_unchanged": true,
+  "installed_cli_offline": "zipapp; isolated Python (-I); empty cwd; socket/HTTP audit hooks reject network",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "runtime_dependencies": "Python standard library only",
+  "sample": {
+    "artifacts": {
+      "index.html": {
+        "bytes": 8891,
+        "sha256": "e6c8dbc895f7b6d3ded372894a86d1e1c28c7ee500d4c81a873a2523eb1624cf"
+      },
+      "report.json": {
+        "bytes": 5863,
+        "sha256": "9bfe66802cc5659f8133161f6cdb78c28a44e79c343d02d364610060a0ecb8ad"
+      }
+    },
+    "elapsed_seconds": 0.1946709998883307,
+    "exit_code": 0,
+    "peak_rss_kib": 20964
+  },
+  "seeded_pairs": 240,
+  "unit_test_exit_code": 0,
+  "verification_elapsed_seconds": 9.178234623279423
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "observed_at": "2026-10-05T12:00:00Z",
+  "feeds": [
+    {
+      "id": "workshop",
+      "label": "Sample workshop",
+      "path": "workshop-before.xml"
+    },
+    {
+      "id": "notes",
+      "label": "Sample field notes",
+      "path": "notes-before.xml"
+    }
+  ]
+}

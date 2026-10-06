@@ -1,0 +1,225 @@
+{
+  "counts": {
+    "absent": 1,
+    "new": 2,
+    "revised": 1,
+    "unchanged": 1
+  },
+  "digest": {
+    "max_items": 100,
+    "omitted": 2,
+    "omitted_by_status": {
+      "absent": 1,
+      "unchanged": 1
+    },
+    "selection": [
+      {
+        "feed_id": "notes",
+        "identity": "atom:urn:sample:fern"
+      },
+      {
+        "feed_id": "workshop",
+        "identity": "rss:bench-4"
+      },
+      {
+        "feed_id": "workshop",
+        "identity": "rss:bench-1"
+      }
+    ],
+    "shown": 3
+  },
+  "identity_version": 1,
+  "input_totals": {
+    "bytes": 1974,
+    "entries": 7
+  },
+  "issues": [],
+  "items": [
+    {
+      "after": {
+        "article_url": "https://example.net/fern",
+        "excerpt": "<p>A sample observation, preserved verbatim.</p>",
+        "excerpt_kind": "summary",
+        "identity": "atom:urn:sample:fern",
+        "link": "https://example.net/fern",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "A fern by the window 🌿",
+        "updated": {
+          "raw": "2026-10-06T11:00:00+02:00",
+          "utc": "2026-10-06T09:00:00Z"
+        }
+      },
+      "before": null,
+      "feed_id": "notes",
+      "identity": "atom:urn:sample:fern",
+      "status": "new"
+    },
+    {
+      "after": {
+        "article_url": "https://example.org/cafe",
+        "excerpt": "A fictional café for repairing small things. No registration is needed.",
+        "excerpt_kind": "description",
+        "identity": "rss:bench-4",
+        "link": "https://example.org/cafe",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "A small repair café",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": null,
+      "feed_id": "workshop",
+      "identity": "rss:bench-4",
+      "status": "new"
+    },
+    {
+      "after": {
+        "article_url": "https://example.org/workshop",
+        "excerpt": "The workshop opens at 10:00. Bring your own notebook.",
+        "excerpt_kind": "description",
+        "identity": "rss:bench-1",
+        "link": "https://example.org/workshop",
+        "published": {
+          "raw": "Mon, 05 Oct 2026 09:00:00 +0000",
+          "utc": "2026-10-05T09:00:00Z"
+        },
+        "title": "Workshop opening hours",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": {
+        "article_url": "https://example.org/workshop",
+        "excerpt": "The workshop opens at 09:00.",
+        "excerpt_kind": "description",
+        "identity": "rss:bench-1",
+        "link": "https://example.org/workshop",
+        "published": {
+          "raw": "Mon, 05 Oct 2026 09:00:00 +0000",
+          "utc": "2026-10-05T09:00:00Z"
+        },
+        "title": "Workshop opening hours",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "feed_id": "workshop",
+      "identity": "rss:bench-1",
+      "status": "revised"
+    },
+    {
+      "after": null,
+      "before": {
+        "article_url": null,
+        "excerpt": "Absence is not proof of deletion.",
+        "excerpt_kind": "description",
+        "identity": "rss:bench-3",
+        "link": "",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "A note no longer in the snapshot",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "feed_id": "workshop",
+      "identity": "rss:bench-3",
+      "status": "absent"
+    },
+    {
+      "after": {
+        "article_url": "https://example.org/note",
+        "excerpt": "This wording has not changed.",
+        "excerpt_kind": "description",
+        "identity": "rss:bench-2",
+        "link": "https://example.org/note",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "A stable note",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": {
+        "article_url": "https://example.org/note",
+        "excerpt": "This wording has not changed.",
+        "excerpt_kind": "description",
+        "identity": "rss:bench-2",
+        "link": "https://example.org/note",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "A stable note",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "feed_id": "workshop",
+      "identity": "rss:bench-2",
+      "status": "unchanged"
+    }
+  ],
+  "outcome": "complete",
+  "schema_version": 1,
+  "sources": [
+    {
+      "current": {
+        "bytes": 406,
+        "entries": 1,
+        "observed_at": "2026-10-06T12:00:00Z",
+        "path": "notes-after.xml",
+        "sha256": "e1553c593a73c13c746c22ca227f9ea3decc8bcc1b8fb6c83dfad1b51f44542d"
+      },
+      "id": "notes",
+      "label": "Sample field notes",
+      "previous": {
+        "bytes": 153,
+        "entries": 0,
+        "observed_at": "2026-10-05T12:00:00Z",
+        "path": "notes-before.xml",
+        "sha256": "5d87c1ddb1a28c548da276b9cc40a15664d59784d85f552ddd42cd3a97e73f38"
+      },
+      "previous_label": "Sample field notes"
+    },
+    {
+      "current": {
+        "bytes": 752,
+        "entries": 3,
+        "observed_at": "2026-10-06T12:00:00Z",
+        "path": "workshop-after.xml",
+        "sha256": "d783a73ab0184af4ad3108e123a609c99d26a7050d2789d022a76262578bcb44"
+      },
+      "id": "workshop",
+      "label": "Sample workshop",
+      "previous": {
+        "bytes": 663,
+        "entries": 3,
+        "observed_at": "2026-10-05T12:00:00Z",
+        "path": "workshop-before.xml",
+        "sha256": "0a38b63c480f11b9cf359eeb49a71a39f875a38105b8ca8c6b2ba4cefcd4c4d3"
+      },
+      "previous_label": "Sample workshop"
+    }
+  ],
+  "window": {
+    "end_inclusive": "2026-10-06T12:00:00Z",
+    "start_exclusive": "2026-10-05T12:00:00Z"
+  }
+}
