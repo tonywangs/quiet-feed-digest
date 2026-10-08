@@ -1,6 +1,12 @@
 # Source review and design choices
 
-Reviewed 2026-10-06. No novelty claim is made.
+Original design review: 2026-10-06. No novelty claim is made.
+
+Compatibility audit update (2026-10-08): the [pinned audit](compatibility.md)
+now vendors feedparser 6.0.11 solely as an independent development comparator,
+with its licensed regression fixtures. It is not an application runtime
+dependency. The historical review below predates that audit; its statements
+about no copied code and no fixture comparison describe the original milestone.
 
 * [RSS Advisory Board, RSS 2.0 specification](https://www.rssboard.org/rss-specification):
   GUIDs identify items, and descriptions can contain entity-encoded HTML. This

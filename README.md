@@ -79,8 +79,9 @@ and disclosure views remain readable; filters do not operate.
 
 Identity version 1 uses the exact nonblank Atom ID or RSS GUID within a feed.
 Without either, it uses the exact, validated absolute HTTP(S) article link.
-It does not normalize identifiers, resolve relative URLs, remove query
-parameters, or merge across publishers. Changing an identity is an absence plus
+Identity matching does not normalize identifiers, resolve relative URLs, remove
+query parameters, or merge across publishers. Article navigation separately
+resolves Atom `xml:base` while retaining the original href. Changing an identity is an absence plus
 a new observation. RSS GUID `isPermaLink` does not turn a GUID into an article
 link. See [semantics and coverage](docs/semantics.md) for the precise contract.
 
@@ -134,7 +135,7 @@ One-time development-only provisioning (requires network and platform browser
 libraries; does not affect the runtime CLI):
 
 ```sh
-npm install --cache /tmp/quiet-feed-npm-cache --prefix /tmp/quiet-feed-browser playwright@1.58.2
+npm install --cache /tmp/quiet-feed-npm-cache --prefix /tmp/quiet-feed-browser playwright@1.61.1
 PLAYWRIGHT_BROWSERS_PATH=/tmp/quiet-feed-browsers \
 node /tmp/quiet-feed-browser/node_modules/playwright/cli.js install chromium
 ```
@@ -173,3 +174,15 @@ Publisher excerpts may be partial, promotional, outdated or wrong; no article
 body is fetched to check them. XHTML is reserialized as inert XML, so original
 prefixes and lexical formatting are not guaranteed. This tool is not a full XML,
 RSS or Atom schema validator.
+
+## Pinned compatibility audit
+
+The [compatibility audit](docs/compatibility.md) freezes 36 licensed upstream
+regression fixtures and 15 labeled local probes, preserving all reader
+incompatibilities and explicit incomplete/error outcomes. It adds Atom article
+`xml:base` resolution and closes two silent unsupported-content paths while
+retaining identity version 1. It is not a representative live-feed survey.
+
+Run `python3 scripts/verify_compatibility.py` offline, or follow the audit's full
+Chromium verification command. Evidence is in `results/compatibility/`; original
+examples and historical results are preserved.

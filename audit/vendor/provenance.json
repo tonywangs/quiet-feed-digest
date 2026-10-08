@@ -1,0 +1,15 @@
+{
+  "feedparser": {
+    "version": "6.0.11",
+    "repository": "https://github.com/kurtmckee/feedparser",
+    "commit": "6cdc20849a66c29e2d08b0334fceb22f210bdb26"
+  },
+  "sgmllib3k": {
+    "version": "1.0.0",
+    "url": "https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz",
+    "sha256": "7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9",
+    "license_source": "https://raw.githubusercontent.com/python/cpython/v2.7.18/LICENSE",
+    "license_declaration": "BSD License",
+    "license_note": "Distribution declares BSD License without bundled license text. It is a 2to3 port of Python stdlib sgmllib; underlying CPython license preserved as SGMLLIB-LICENSE. Original metadata and attribution preserved as SGMLLIB-PKG-INFO."
+  }
+}

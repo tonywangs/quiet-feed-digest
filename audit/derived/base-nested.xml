@@ -1,0 +1,1 @@
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://example.org/news/"><entry xml:base="2026/"><id>urn:test:1</id><link xml:base="../stories/" href="article?x=1&amp;y=2"/></entry></feed>

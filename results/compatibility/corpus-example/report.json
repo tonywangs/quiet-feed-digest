@@ -1,0 +1,235 @@
+{
+  "counts": {
+    "absent": 0,
+    "new": 3,
+    "revised": 1,
+    "unchanged": 1
+  },
+  "digest": {
+    "max_items": 100,
+    "omitted": 1,
+    "omitted_by_status": {
+      "unchanged": 1
+    },
+    "selection": [
+      {
+        "feed_id": "atom",
+        "identity": "atom:urn:corpus:hostile"
+      },
+      {
+        "feed_id": "atom",
+        "identity": "atom:urn:corpus:relative"
+      },
+      {
+        "feed_id": "rss",
+        "identity": "rss:urn:corpus:rss:2"
+      },
+      {
+        "feed_id": "rss",
+        "identity": "rss:http://guid.example.com/"
+      }
+    ],
+    "shown": 4
+  },
+  "identity_version": 1,
+  "input_totals": {
+    "bytes": 1962,
+    "entries": 7
+  },
+  "issues": [
+    {
+      "code": "non_clickable_link",
+      "entry": 2,
+      "feed_id": "atom",
+      "snapshot": "current"
+    }
+  ],
+  "items": [
+    {
+      "after": {
+        "article_url": null,
+        "excerpt": "<script>window.PWNED=1</script><img src=\"https://evil.invalid/pixel\" onerror=\"window.PWNED=1\">",
+        "excerpt_kind": "summary",
+        "identity": "atom:urn:corpus:hostile",
+        "link": "javascript:alert(1)",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "<script>window.PWNED=1</script><img src=\"https://evil.invalid/pixel\" onerror=\"window.PWNED=1\">",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": null,
+      "feed_id": "atom",
+      "identity": "atom:urn:corpus:hostile",
+      "status": "new"
+    },
+    {
+      "after": {
+        "article_url": "https://example.org/corpus/story",
+        "excerpt": "Example <b>Atom</b>",
+        "excerpt_kind": "summary",
+        "identity": "atom:urn:corpus:relative",
+        "link": "story",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "Relative corpus-derived article",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": null,
+      "feed_id": "atom",
+      "identity": "atom:urn:corpus:relative",
+      "status": "new"
+    },
+    {
+      "after": {
+        "article_url": "http://link.example.com/",
+        "excerpt": "<p>Example description</p>",
+        "excerpt_kind": "description",
+        "identity": "rss:urn:corpus:rss:2",
+        "link": "http://link.example.com/",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "Added corpus-derived item",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": null,
+      "feed_id": "rss",
+      "identity": "rss:urn:corpus:rss:2",
+      "status": "new"
+    },
+    {
+      "after": {
+        "article_url": "http://link.example.com/",
+        "excerpt": "<p>Example description</p> Revised locally.",
+        "excerpt_kind": "description",
+        "identity": "rss:http://guid.example.com/",
+        "link": "http://link.example.com/",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "Item 1 title",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": {
+        "article_url": "http://link.example.com/",
+        "excerpt": "<p>Example description</p>",
+        "excerpt_kind": "description",
+        "identity": "rss:http://guid.example.com/",
+        "link": "http://link.example.com/",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "Item 1 title",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "feed_id": "rss",
+      "identity": "rss:http://guid.example.com/",
+      "status": "revised"
+    },
+    {
+      "after": {
+        "article_url": "http://www.example.com/",
+        "excerpt": "Example <b>Atom</b>",
+        "excerpt_kind": "summary",
+        "identity": "atom:urn:corpus:atom:1",
+        "link": "http://www.example.com/",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "Example Atom",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "before": {
+        "article_url": "http://www.example.com/",
+        "excerpt": "Example <b>Atom</b>",
+        "excerpt_kind": "summary",
+        "identity": "atom:urn:corpus:atom:1",
+        "link": "http://www.example.com/",
+        "published": {
+          "raw": "",
+          "utc": null
+        },
+        "title": "Example Atom",
+        "updated": {
+          "raw": "",
+          "utc": null
+        }
+      },
+      "feed_id": "atom",
+      "identity": "atom:urn:corpus:atom:1",
+      "status": "unchanged"
+    }
+  ],
+  "outcome": "complete",
+  "schema_version": 1,
+  "sources": [
+    {
+      "current": {
+        "bytes": 968,
+        "entries": 3,
+        "observed_at": "2026-10-06T12:00:00Z",
+        "path": "current-atom.xml",
+        "sha256": "6fb8dccd6f6116898d65a85af3c4570703181fbba0e7cf222eb3a5e6d41dda75"
+      },
+      "id": "atom",
+      "label": "Corpus-derived atom",
+      "previous": {
+        "bytes": 329,
+        "entries": 1,
+        "observed_at": "2026-10-05T12:00:00Z",
+        "path": "previous-atom.xml",
+        "sha256": "25aa0a3b8a1f5fa382f6bcf0416e70755a0190abe450a788578fea96d906b724"
+      },
+      "previous_label": "Corpus-derived atom"
+    },
+    {
+      "current": {
+        "bytes": 436,
+        "entries": 2,
+        "observed_at": "2026-10-06T12:00:00Z",
+        "path": "current-rss.xml",
+        "sha256": "cf123092e71df103be5678f72ddf1e8aa4f853b8595ffef1cd00276151b1259b"
+      },
+      "id": "rss",
+      "label": "Corpus-derived rss",
+      "previous": {
+        "bytes": 229,
+        "entries": 1,
+        "observed_at": "2026-10-05T12:00:00Z",
+        "path": "previous-rss.xml",
+        "sha256": "8a5b071fc4fbcb6027fc6fb9981ba3e895081c6dc87babfec92e460c803efff4"
+      },
+      "previous_label": "Corpus-derived rss"
+    }
+  ],
+  "window": {
+    "end_inclusive": "2026-10-06T12:00:00Z",
+    "start_exclusive": "2026-10-05T12:00:00Z"
+  }
+}

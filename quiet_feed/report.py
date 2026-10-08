@@ -52,7 +52,7 @@ def e(value):
 
 
 def fields(item):
-    url = safe_url(item['link'])
+    url = safe_url(item['article_url'] or '')
     link = f'<a href="{e(url)}" rel="noreferrer noopener" referrerpolicy="no-referrer">Open publisher article</a>' if url else '<span>No validated HTTP(S) article link</span>'
     dates = ''.join(f'<dt>{name.capitalize()} (publisher)</dt><dd>{e(item[name]["raw"] or "Not supplied")}</dd>' for name in ('published', 'updated'))
     return f'''<p>{link}</p><p class="muted">Publisher-provided excerpt ({e(item['excerpt_kind'])}); markup shown literally.</p>

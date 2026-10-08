@@ -1,0 +1,3755 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "http://example.com/",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": "http://example.com/",
+          "field": "article_url",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": null
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_id.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://example.com/",
+            "excerpt": "",
+            "identity": "atom:http://example.com/",
+            "link": "http://example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://www.example.org/thing",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "http://www.example.org/thing",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": "http://www.example.org/thing",
+          "field": "article_url",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": null
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://www.example.org/thing",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_id_no_normalization_1.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://www.example.org/thing",
+            "excerpt": "",
+            "identity": "atom:http://www.example.org/thing",
+            "link": "http://www.example.org/thing",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://www.example.org/Thing",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "http://www.example.org/Thing",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": "http://www.example.org/Thing",
+          "field": "article_url",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": null
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://www.example.org/Thing",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_id_no_normalization_2.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://www.example.org/Thing",
+            "excerpt": "",
+            "identity": "atom:http://www.example.org/Thing",
+            "link": "http://www.example.org/Thing",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://www.example.com/%7Ebob",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "http://www.example.com/%7Ebob",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": "http://www.example.com/%7Ebob",
+          "field": "article_url",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": null
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:http://www.example.com/%7Ebob",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_id_no_normalization_7.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://www.example.com/%7Ebob",
+            "excerpt": "",
+            "identity": "atom:http://www.example.com/%7Ebob",
+            "link": "http://www.example.com/%7Ebob",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example Atom",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example Atom",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_title.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example Atom",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example <b>Atom</b>",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example <b>Atom</b>",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_title_escaped_markup.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example <b>Atom</b>",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "History of the <blink> tag",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "History of the <blink> tag",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_title_text_plain_brackets.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "History of the <blink> tag",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_summary.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example <b>Atom</b>",
+            "excerpt_kind": "summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example <b>Atom</b>",
+            "excerpt_kind": "summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_summary_escaped_markup.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example <b>Atom</b>",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_content_and_summary.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_content_text_plain.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_content_type_text.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "external_content_not_loaded",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "external_content_not_loaded",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_content_src.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_text_type",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "Example <b>Atom</b>",
+          "field": "excerpt",
+          "interpretation": "Unsupported content explicitly marks analysis incomplete; reader decodes or maps it.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_text_type",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_content_base64.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example <b>Atom</b>",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "link:http://www.example.com/",
+            "link": "http://www.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "link:http://www.example.com/",
+            "link": "http://www.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_link_no_rel.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "identity": "link:http://www.example.com/",
+            "link": "http://www.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "link:http://www.example.com/",
+            "link": "http://www.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "link:http://www.example.com/",
+            "link": "http://www.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_link_multiple.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "identity": "link:http://www.example.com/",
+            "link": "http://www.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_link_rel_enclosure.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_category_term_non_ascii.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": []
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": []
+      },
+      "file": "wellformed-atom10--atom10_namespace.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<html:div xmlns:html=\"http://www.w3.org/1999/xhtml\">Example <html:b>Atom</html:b></html:div>",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "Example <b>Atom</b>",
+          "field": "excerpt",
+          "interpretation": "Quiet Feed preserves the XHTML div and serialized namespaces; reader strips wrapper/prefixes.",
+          "quiet_feed": "<html:div xmlns:html=\"http://www.w3.org/1999/xhtml\">Example <html:b>Atom</html:b></html:div>"
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<html:div xmlns:html=\"http://www.w3.org/1999/xhtml\">Example <html:b>Atom</html:b></html:div>",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-atom10--entry_content_application_xml.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example <b>Atom</b>",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": "rss:http://guid.example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "http://guid.example.com/",
+          "field": "link",
+          "interpretation": "Reader promotes permalink GUID to link; Quiet Feed keeps GUID identity separate. RSS permits this reader behavior, does not require it.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": "http://guid.example.com/",
+          "field": "article_url",
+          "interpretation": "Reader promotes permalink GUID to link; Quiet Feed keeps GUID identity separate. RSS permits this reader behavior, does not require it.",
+          "quiet_feed": null
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": "rss:http://guid.example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_guid.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://guid.example.com/",
+            "excerpt": "",
+            "identity": "rss:http://guid.example.com/",
+            "link": "http://guid.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": "rss:http://guid.example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": "rss:http://guid.example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_guid_not_permalink.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": "rss:http://guid.example.com/",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "http://link.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": "rss:http://guid.example.com/",
+            "link": "http://link.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "http://link.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": "rss:http://guid.example.com/",
+            "link": "http://link.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_guid_conflict_link.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "http://link.example.com/",
+            "excerpt": "",
+            "identity": "rss:http://guid.example.com/",
+            "link": "http://link.example.com/",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Item 1 title",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Item 1 title",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_title.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Item 1 title",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example description",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example description",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_description.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Example description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<p>Example description</p>",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<p>Example description</p>",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_description_escaped_markup.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<p>Example description</p>",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "Thu, 01 Jan 2004 19:48:21 GMT",
+              "utc": "2004-01-01T19:48:21Z"
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": {
+            "raw": "Thu, 01 Jan 2004 19:48:21 GMT",
+            "utc": "2004-01-01T19:48:21Z"
+          },
+          "field": "updated",
+          "interpretation": "Pinned reader backward-compatibility alias exposes published as updated; Quiet Feed keeps RSS published separate.",
+          "quiet_feed": {
+            "raw": "",
+            "utc": null
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "Thu, 01 Jan 2004 19:48:21 GMT",
+              "utc": "2004-01-01T19:48:21Z"
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_pubDate_map_updated_parsed.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "Thu, 01 Jan 2004 19:48:21 GMT",
+              "utc": "2004-01-01T19:48:21Z"
+            },
+            "title": "",
+            "updated": {
+              "raw": "Thu, 01 Jan 2004 19:48:21 GMT",
+              "utc": "2004-01-01T19:48:21Z"
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": {
+            "raw": "2003-12-31T10:14:55Z",
+            "utc": "2003-12-31T10:14:55Z"
+          },
+          "field": "updated",
+          "interpretation": "Unsupported Dublin Core field explicitly marks analysis incomplete; reader maps extension.",
+          "quiet_feed": {
+            "raw": "",
+            "utc": null
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_dc_date.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "2003-12-31T10:14:55Z",
+              "utc": "2003-12-31T10:14:55Z"
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "Example title",
+          "field": "title",
+          "interpretation": "Unsupported Dublin Core field explicitly marks analysis incomplete; reader maps extension.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_dc_title.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Example title",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "error": "Nested markup requires Atom XHTML text type"
+      },
+      "discrepancies": [
+        {
+          "feedparser": {
+            "bozo": false,
+            "entries": 1
+          },
+          "field": "parse",
+          "interpretation": "Strict rejection; permissive recovery is not a specification requirement.",
+          "quiet_feed": {
+            "error": "Nested markup requires Atom XHTML text type"
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "error": "Nested markup requires Atom XHTML text type"
+      },
+      "file": "wellformed-rss--item_description_naked_markup.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<p>Example description</p>",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_content_encoded",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "<p>Example content</p>",
+          "field": "excerpt",
+          "interpretation": "Unsupported content explicitly marks analysis incomplete; reader decodes or maps it.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_content_encoded",
+            "entry": 1
+          },
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "wellformed-rss--item_content_encoded.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "<p>Example content</p>",
+            "identity": null,
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "error": "Malformed XML: unclosed token: line 6, column 0"
+      },
+      "discrepancies": [
+        {
+          "feedparser": {
+            "bozo": true,
+            "entries": 0
+          },
+          "field": "parse",
+          "interpretation": "Strict rejection; permissive recovery is not a specification requirement.",
+          "quiet_feed": {
+            "error": "Malformed XML: unclosed token: line 6, column 0"
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "error": "Malformed XML:"
+      },
+      "file": "illformed--aaa_illformed.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": true,
+        "records": [],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "error": "Malformed XML: unbound prefix: line 8, column 0"
+      },
+      "discrepancies": [
+        {
+          "feedparser": {
+            "bozo": true,
+            "entries": 0
+          },
+          "field": "parse",
+          "interpretation": "Strict rejection; permissive recovery is not a specification requirement.",
+          "quiet_feed": {
+            "error": "Malformed XML: unbound prefix: line 8, column 0"
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "error": "Malformed XML:"
+      },
+      "file": "illformed--undeclared_namespace.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": true,
+        "records": [],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": []
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": []
+      },
+      "file": "wellformed-atom10--relative_uri.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": []
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": []
+      },
+      "file": "wellformed-atom10--relative_uri_inherit.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": []
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": []
+      },
+      "file": "wellformed-atom10--relative_uri_inherit_2.xml",
+      "group": "upstream",
+      "independent_reader": {
+        "bozo": false,
+        "records": [],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "https://example.org/news/article",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "https://example.org/news/article",
+          "field": "link",
+          "interpretation": "Raw href and raw absolute-link identity policy retained; only article_url resolves xml:base. Missing safe base remains incomplete.",
+          "quiet_feed": "article"
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "https://example.org/news/article",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "base-inherited.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "https://example.org/news/article",
+            "excerpt": "",
+            "identity": "atom:urn:test:1",
+            "link": "https://example.org/news/article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "https://example.org/news/stories/article?x=1&y=2",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article?x=1&y=2",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "https://example.org/news/stories/article?x=1&y=2",
+          "field": "link",
+          "interpretation": "Raw href and raw absolute-link identity policy retained; only article_url resolves xml:base. Missing safe base remains incomplete.",
+          "quiet_feed": "article?x=1&y=2"
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "https://example.org/news/stories/article?x=1&y=2",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article?x=1&y=2",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "base-nested.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "https://example.org/news/stories/article?x=1&y=2",
+            "excerpt": "",
+            "identity": "atom:urn:test:1",
+            "link": "https://example.org/news/stories/article?x=1&y=2",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "https://other.example/a",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "a",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "https://other.example/a",
+          "field": "link",
+          "interpretation": "Raw href and raw absolute-link identity policy retained; only article_url resolves xml:base. Missing safe base remains incomplete.",
+          "quiet_feed": "a"
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": "https://other.example/a",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "a",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "base-overridden.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "https://other.example/a",
+            "excerpt": "",
+            "identity": "atom:urn:test:1",
+            "link": "https://other.example/a",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unresolved_relative_link",
+            "entry": 1
+          },
+          {
+            "code": "non_clickable_link",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unresolved_relative_link",
+            "entry": 1
+          },
+          {
+            "code": "non_clickable_link",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "base-unresolved.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unresolved_relative_link",
+            "entry": 1
+          },
+          {
+            "code": "non_clickable_link",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unresolved_relative_link",
+            "entry": 1
+          },
+          {
+            "code": "non_clickable_link",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "base-hostile.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": "atom:urn:test:1",
+            "link": "article",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": "https://example.org/a",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "a",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "link:https://example.org/a",
+          "field": "identity",
+          "interpretation": "Raw href and raw absolute-link identity policy retained; only article_url resolves xml:base. Missing safe base remains incomplete.",
+          "quiet_feed": null
+        },
+        {
+          "entry": 1,
+          "feedparser": "https://example.org/a",
+          "field": "link",
+          "interpretation": "Raw href and raw absolute-link identity policy retained; only article_url resolves xml:base. Missing safe base remains incomplete.",
+          "quiet_feed": "a"
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "missing_identity",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": "https://example.org/a",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": null,
+            "link": "a",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "base-no-identity.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": "https://example.org/a",
+            "excerpt": "",
+            "identity": "link:https://example.org/a",
+            "link": "https://example.org/a",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "external_content_not_loaded",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "identity": "atom:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "urn:test:1",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "external_content_not_loaded",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "identity": "atom:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "summary-external.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "atom:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_text_type",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "identity": "atom:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "urn:test:1",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_text_type",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "identity": "atom:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "summary-binary.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "atom:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "error": "Repeated singleton field: {http://www.w3.org/2005/Atom}content"
+      },
+      "discrepancies": [
+        {
+          "feedparser": {
+            "bozo": false,
+            "entries": 1
+          },
+          "field": "parse",
+          "interpretation": "Strict rejection; permissive recovery is not a specification requirement.",
+          "quiet_feed": {
+            "error": "Repeated singleton field: {http://www.w3.org/2005/Atom}content"
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "error": "Repeated singleton field:"
+      },
+      "file": "summary-duplicate-content.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "atom:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "error": "Atom XHTML requires one XHTML div"
+      },
+      "discrepancies": [
+        {
+          "feedparser": {
+            "bozo": false,
+            "entries": 1
+          },
+          "field": "parse",
+          "interpretation": "Strict rejection; permissive recovery is not a specification requirement.",
+          "quiet_feed": {
+            "error": "Atom XHTML requires one XHTML div"
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "error": "Atom XHTML requires one XHTML div"
+      },
+      "file": "summary-invalid-xhtml.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "atom:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "error": "Entry field or excerpt length limit exceeded"
+      },
+      "discrepancies": [
+        {
+          "feedparser": {
+            "bozo": false,
+            "entries": 1
+          },
+          "field": "parse",
+          "interpretation": "Strict rejection; permissive recovery is not a specification requirement.",
+          "quiet_feed": {
+            "error": "Entry field or excerpt length limit exceeded"
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "error": "Entry field or excerpt length limit exceeded"
+      },
+      "file": "summary-oversize-content.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "atom:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "identity": "rss:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "Unexamined",
+          "field": "title",
+          "interpretation": "Unsupported Dublin Core field explicitly marks analysis incomplete; reader maps extension.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": "urn:test:1",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "identity": "rss:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "rss-hidden-dc-title.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "rss:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "Unexamined",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "identity": "rss:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "urn:test:1",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        },
+        {
+          "entry": 1,
+          "feedparser": {
+            "raw": "Unexamined",
+            "utc": null
+          },
+          "field": "updated",
+          "interpretation": "Unsupported Dublin Core field explicitly marks analysis incomplete; reader maps extension.",
+          "quiet_feed": {
+            "raw": "",
+            "utc": null
+          }
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_rss_extension",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "identity": "rss:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "rss-hidden-dc-date.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "rss:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "Unexamined",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [
+          {
+            "code": "unsupported_content_encoded",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "identity": "rss:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "urn:test:1",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [
+          {
+            "code": "unsupported_content_encoded",
+            "entry": 1
+          }
+        ],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "identity": "rss:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ]
+      },
+      "file": "rss-hidden-content-encoded.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "Summary",
+            "identity": "rss:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "title": "",
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "version": "rss20"
+      }
+    },
+    {
+      "actual": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "2026-10-05T09:30:00+02:00",
+              "utc": "2026-10-05T07:30:00Z"
+            },
+            "title": "日本語 café 🌱",
+            "updated": {
+              "raw": "2026-10-05T10:00:00Z",
+              "utc": "2026-10-05T10:00:00Z"
+            }
+          }
+        ]
+      },
+      "discrepancies": [
+        {
+          "entry": 1,
+          "feedparser": "urn:test:1",
+          "field": "link",
+          "interpretation": "Reader supplies ID/GUID as a missing link (even URNs in some cases); Quiet Feed preserves absence of an explicit article link.",
+          "quiet_feed": ""
+        }
+      ],
+      "expectation_passed": true,
+      "expected": {
+        "issues": [],
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "identity": "atom:urn:test:1",
+            "link": "",
+            "published": {
+              "raw": "2026-10-05T09:30:00+02:00",
+              "utc": "2026-10-05T07:30:00Z"
+            },
+            "title": "日本語 café 🌱",
+            "updated": {
+              "raw": "2026-10-05T10:00:00Z",
+              "utc": "2026-10-05T10:00:00Z"
+            }
+          }
+        ]
+      },
+      "file": "unicode-date.xml",
+      "group": "derived",
+      "independent_reader": {
+        "bozo": false,
+        "records": [
+          {
+            "article_url": null,
+            "excerpt": "",
+            "identity": "atom:urn:test:1",
+            "link": "urn:test:1",
+            "published": {
+              "raw": "2026-10-05T09:30:00+02:00",
+              "utc": "2026-10-05T07:30:00Z"
+            },
+            "title": "日本語 café 🌱",
+            "updated": {
+              "raw": "2026-10-05T10:00:00Z",
+              "utc": "2026-10-05T10:00:00Z"
+            }
+          }
+        ],
+        "version": "atom10"
+      }
+    }
+  ],
+  "comparison": "Entry order; exact identity, title, raw link, article URL, excerpt, raw and UTC published/updated. Excerpt kind is Quiet Feed policy, not a reader field. All mismatches retained.",
+  "reader": "feedparser 6.0.11; sanitize_html=False; resolve_relative_uris=False (only affects embedded HTML)",
+  "totals": {
+    "derived": {
+      "compared_entry_fields": 84,
+      "differing_entry_fields": 13,
+      "expectation_passes": 15,
+      "extracted_with_issues": 8,
+      "extracted_without_issues": 4,
+      "fixtures": 15,
+      "fixtures_with_reader_discrepancies": 13,
+      "matching_entry_fields": 71,
+      "reader_field_discrepancies": 16,
+      "reader_parse_differences": 3,
+      "strict_rejections": 3
+    },
+    "upstream": {
+      "compared_entry_fields": 203,
+      "differing_entry_fields": 16,
+      "expectation_passes": 36,
+      "extracted_with_issues": 20,
+      "extracted_without_issues": 13,
+      "fixtures": 36,
+      "fixtures_with_reader_discrepancies": 14,
+      "matching_entry_fields": 187,
+      "reader_field_discrepancies": 19,
+      "reader_parse_differences": 3,
+      "strict_rejections": 3
+    }
+  }
+}

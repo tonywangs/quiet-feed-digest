@@ -1,0 +1,214 @@
+{
+  "corpus_browser": {
+    "article_hrefs": [
+      "http://link.example.com/",
+      "http://link.example.com/",
+      "http://link.example.com/",
+      "https://example.org/corpus/story"
+    ],
+    "automatic_remote_requests": 0,
+    "blocked_user_navigation": [
+      "https://example.org/corpus/story"
+    ],
+    "checks": [
+      "source filtering",
+      "revision filtering",
+      "before/after text",
+      "Enter and Space disclosure",
+      "Tab navigation",
+      "hostile markup inert",
+      "validated resolved article links",
+      "blocked article navigation",
+      "320px viewport"
+    ],
+    "chromium": "149.0.7827.55",
+    "external_networking": "offline context; service workers blocked; route permits only report file",
+    "node": "v24.20.0",
+    "page_errors": [],
+    "performed": true,
+    "playwright": "1.61.1"
+  },
+  "dependencies": {
+    "feedparser": {
+      "commit": "6cdc20849a66c29e2d08b0334fceb22f210bdb26",
+      "repository": "https://github.com/kurtmckee/feedparser",
+      "version": "6.0.11"
+    },
+    "sgmllib3k": {
+      "license_declaration": "BSD License",
+      "license_note": "Distribution declares BSD License without bundled license text. It is a 2to3 port of Python stdlib sgmllib; underlying CPython license preserved as SGMLLIB-LICENSE. Original metadata and attribution preserved as SGMLLIB-PKG-INFO.",
+      "license_source": "https://raw.githubusercontent.com/python/cpython/v2.7.18/LICENSE",
+      "sha256": "7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9",
+      "url": "https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz",
+      "version": "1.0.0"
+    }
+  },
+  "elapsed_seconds": 19.202388279139996,
+  "expat": "expat_2.6.1",
+  "historical_checks": {
+    "bounded_250_revisions": {
+      "artifacts": {
+        "index.html": {
+          "bytes": 355324,
+          "sha256": "43f5bc765728de925dcc6c1a5f78d08d91a43c837bbc0764bb09a808da7ec970"
+        },
+        "report.json": {
+          "bytes": 304895,
+          "sha256": "8875b26c2faaf12aa0d554fe352ce7f72a258cd625671b725bfccd31a7f95b24"
+        }
+      },
+      "elapsed_seconds": 0.2997736670076847,
+      "exit_code": 0,
+      "peak_rss_kib": 26260
+    },
+    "browser": {
+      "automatic_remote_requests": 0,
+      "checks": [
+        "source and status filters",
+        "before/after revision",
+        "Enter and Space disclosure keys",
+        "Tab and native select keys",
+        "visible 3px focus",
+        "320px viewport without overflow",
+        "hostile content inert",
+        "200-card cap",
+        "no-JavaScript reading"
+      ],
+      "chromium": "149.0.7827.55",
+      "elements": {
+        "bounded": 8437,
+        "hostile": 95,
+        "sample": 134
+      },
+      "external_networking": "offline context; only named local report navigation allowed; external requests aborted; service workers blocked",
+      "maximum_tested_cards": 200,
+      "node": "v24.20.0",
+      "page_errors": 0,
+      "performed": true,
+      "playwright": "1.61.1"
+    },
+    "deterministic_repeat": true,
+    "expat": "expat_2.6.1",
+    "hostile": {
+      "artifacts": {
+        "index.html": {
+          "bytes": 10271,
+          "sha256": "fd955bf18097b8cedaf83d52d0bf3d854aa0a625bf430a19e1abba5b6cc14629"
+        },
+        "report.json": {
+          "bytes": 5329,
+          "sha256": "9169794fae3e320aad35eaaf7ecaef9adeb63859de82ace3a9bd057b1ea11551"
+        }
+      },
+      "elapsed_seconds": 0.18184074480086565,
+      "exit_code": 2,
+      "peak_rss_kib": 21144
+    },
+    "input_hashes_unchanged": true,
+    "installed_cli_offline": "zipapp; isolated Python (-I); empty cwd; socket/HTTP audit hooks reject network",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "runtime_dependencies": "Python standard library only",
+    "sample": {
+      "artifacts": {
+        "index.html": {
+          "bytes": 8891,
+          "sha256": "e6c8dbc895f7b6d3ded372894a86d1e1c28c7ee500d4c81a873a2523eb1624cf"
+        },
+        "report.json": {
+          "bytes": 5863,
+          "sha256": "9bfe66802cc5659f8133161f6cdb78c28a44e79c343d02d364610060a0ecb8ad"
+        }
+      },
+      "elapsed_seconds": 0.18294491479173303,
+      "exit_code": 0,
+      "peak_rss_kib": 20596
+    },
+    "seeded_pairs": 240,
+    "unit_test_exit_code": 0,
+    "verification_elapsed_seconds": 15.532314890995622
+  },
+  "installed_corpus_cli": {
+    "artifacts": {
+      "index.html": {
+        "bytes": 9971,
+        "sha256": "98a6ab0197a7c36aa377acfd7bd7ff9615dbbccd722de4b5b1f0659230a14075"
+      },
+      "report.json": {
+        "bytes": 6033,
+        "sha256": "43f6f473acdfc2dafabf4208a2ba96effe809cd61e6b7124d56bec1044651378"
+      }
+    },
+    "elapsed_seconds": 0.16599727794528008,
+    "exit_code": 0,
+    "peak_rss_kib": 24976
+  },
+  "installed_incomplete_cli": {
+    "artifacts": {
+      "index.html": {
+        "bytes": 7885,
+        "sha256": "29ad8d2805e3dc3be44ecf8eccad3e9ae1b33ba68d20fdbd3901a5057c43eea5"
+      },
+      "report.json": {
+        "bytes": 4310,
+        "sha256": "b44b747fe91140ca2a14f962227fab33375b1620dd71d2cc5ba65f4680e04790"
+      }
+    },
+    "elapsed_seconds": 0.17059386475011706,
+    "exit_code": 2,
+    "peak_rss_kib": 24976
+  },
+  "offline": "Python audit hooks reject socket/HTTP operations in audit and installed CLI; Chromium offline and routing enforced when requested",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "repeated_corpus_cli": {
+    "artifacts": {
+      "index.html": {
+        "bytes": 9971,
+        "sha256": "98a6ab0197a7c36aa377acfd7bd7ff9615dbbccd722de4b5b1f0659230a14075"
+      },
+      "report.json": {
+        "bytes": 6033,
+        "sha256": "43f6f473acdfc2dafabf4208a2ba96effe809cd61e6b7124d56bec1044651378"
+      }
+    },
+    "elapsed_seconds": 0.18530570901930332,
+    "exit_code": 0,
+    "peak_rss_kib": 24976
+  },
+  "repeated_output_hashes_equal": true,
+  "seed_range": [
+    91000,
+    91239
+  ],
+  "seeded_pairs_against_pinned_reader": 240,
+  "snapshot_input_hashes_unchanged": true,
+  "totals": {
+    "derived": {
+      "compared_entry_fields": 84,
+      "differing_entry_fields": 13,
+      "expectation_passes": 15,
+      "extracted_with_issues": 8,
+      "extracted_without_issues": 4,
+      "fixtures": 15,
+      "fixtures_with_reader_discrepancies": 13,
+      "matching_entry_fields": 71,
+      "reader_field_discrepancies": 16,
+      "reader_parse_differences": 3,
+      "strict_rejections": 3
+    },
+    "upstream": {
+      "compared_entry_fields": 203,
+      "differing_entry_fields": 16,
+      "expectation_passes": 36,
+      "extracted_with_issues": 20,
+      "extracted_without_issues": 13,
+      "fixtures": 36,
+      "fixtures_with_reader_discrepancies": 14,
+      "matching_entry_fields": 187,
+      "reader_field_discrepancies": 19,
+      "reader_parse_differences": 3,
+      "strict_rejections": 3
+    }
+  }
+}

@@ -11,7 +11,7 @@ import os
 from pathlib import Path
 import re
 import stat
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 import xml.etree.ElementTree as ET
 from xml.parsers import expat
 
@@ -30,6 +30,8 @@ MAX_VISIBLE = 200
 ATOM = '{http://www.w3.org/2005/Atom}'
 XHTML = '{http://www.w3.org/1999/xhtml}'
 CONTENT = '{http://purl.org/rss/1.0/modules/content/}encoded'
+XML_BASE = '{http://www.w3.org/XML/1998/namespace}base'
+DC = '{http://purl.org/dc/elements/1.1/}'
 
 
 class InputError(ValueError):
@@ -230,22 +232,52 @@ def parse_feed(data: bytes) -> tuple[list[dict], list[dict]]:
                 link = ''
             else:
                 link = links[0].get('href', '') if links else ''
-            excerpt = text_field('summary') if single(entry, ATOM + 'summary') is not None else text_field('content')
+            # Validate content even when the display policy prefers a summary.
+            # Otherwise external, binary, oversized or ambiguous content disappears.
+            content = text_field('content')
+            if len(content) > MAX_EXCERPT:
+                raise InputError('Entry field or excerpt length limit exceeded')
+            excerpt = text_field('summary') if single(entry, ATOM + 'summary') is not None else content
             excerpt_kind = 'summary' if single(entry, ATOM + 'summary') is not None else 'content'
             published, updated = text_field('published'), text_field('updated')
         else:
             link, excerpt = text_field('link'), text_field('description')
             excerpt_kind = 'description'
             published, updated = text_field('pubDate'), ''
-            if not excerpt and entry.find(CONTENT) is not None:
+            if entry.find(CONTENT) is not None:
                 issue('unsupported_content_encoded')
+            if any(entry.find(DC + name) is not None for name in ('title', 'description', 'date', 'identifier')):
+                issue('unsupported_rss_extension')
         if len(excerpt) > MAX_EXCERPT or any(len(v) > MAX_FIELD for v in (ident, title, link, published, updated)):
             raise InputError('Entry field or excerpt length limit exceeded')
         clickable = safe_url(link)
+        if atom and link and not clickable and len(links) == 1:
+            # Only article navigation resolves bases. Publisher IDs and raw hrefs
+            # remain verbatim; local snapshot paths never supply a network base.
+            try:
+                relative = not urlsplit(link).scheme
+                if relative:
+                    base = ''
+                    for node in (root, entry, links[0]):
+                        value = node.get(XML_BASE)
+                        if value is not None:
+                            if len(value) > MAX_FIELD or any(ord(c) <= 32 for c in value):
+                                raise ValueError('Invalid base')
+                            base = urljoin(base, value)
+                            if len(base) > MAX_FIELD:
+                                raise ValueError('Oversized base')
+                    # Reject whitespace before urljoin can silently remove it.
+                    if any(ord(c) <= 32 for c in link):
+                        raise ValueError('Invalid relative link')
+                    clickable = safe_url(urljoin(base, link)) if safe_url(base) else None
+                    if not clickable:
+                        issue('unresolved_relative_link')
+            except ValueError:
+                issue('unresolved_relative_link')
         if link and not clickable:
             issue('non_clickable_link')
         # No normalization, case folding, URL rewriting, or cross-feed merging.
-        key = ('atom:' if atom else 'rss:') + ident if ident.strip() else ('link:' + link if clickable else None)
+        key = ('atom:' if atom else 'rss:') + ident if ident.strip() else ('link:' + link if safe_url(link) else None)
         if key is None:
             issue('missing_identity')
         dates = {}

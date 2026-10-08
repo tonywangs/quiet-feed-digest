@@ -24,7 +24,10 @@ publishing an empty-success digest. All feeds must parse; there is no partial
 feed skipping. Identity/content/date problems instead yield an explicitly
 **incomplete** report with issue details. Non-clickable links and identical
 duplicates are warnings alone; if an unsafe link also leaves no identity, that
-missing-identity issue makes the result incomplete.
+missing-identity issue makes the result incomplete. Unresolved relative Atom
+links now have an additional incomplete-analysis issue. Atom content is subject
+to the excerpt limit even when a summary is displayed; base attributes and
+composed bases are bounded by the scalar-field limit.
 
 Output serialization and byte-size checks finish before creating the output
 directory. `mkdir` reserves that directory exclusively; existing files,

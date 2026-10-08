@@ -1,0 +1,374 @@
+{
+  "origin": "Locally authored transformations of corpus base, content/summary, and RSS extension patterns. Not external fixtures.",
+  "cases": [
+    {
+      "file": "base-inherited.xml",
+      "sha256": "57e696689f0322ee708c62fb332af1be3b989dd52afabb6c7a60bde6fe46a1d7",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "article",
+            "article_url": "https://example.org/news/article",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "base-nested.xml",
+      "sha256": "5ae962ff0122acd27985c381ad2636312df2fcf78570d2041bd2e27af8e64cd6",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "article?x=1&y=2",
+            "article_url": "https://example.org/news/stories/article?x=1&y=2",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "base-overridden.xml",
+      "sha256": "4b3085a3cd25353d3eb0167f009fd20434f2e2a6950cc7bd3172b6a13aa12662",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "a",
+            "article_url": "https://other.example/a",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "base-unresolved.xml",
+      "sha256": "3d4d07f2b091882637e6b3887ce3391ccb2e0a97af9e8b932c6ff6411a548b4c",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "article",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unresolved_relative_link"
+          },
+          {
+            "entry": 1,
+            "code": "non_clickable_link"
+          }
+        ]
+      }
+    },
+    {
+      "file": "base-hostile.xml",
+      "sha256": "38602159b7ace2f961422ca8e5957831dadc2692949607bae4a9ec809d0140e1",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "article",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unresolved_relative_link"
+          },
+          {
+            "entry": 1,
+            "code": "non_clickable_link"
+          }
+        ]
+      }
+    },
+    {
+      "file": "base-no-identity.xml",
+      "sha256": "4b4d746ac7657e8f2c83d9548cb143b717d9a73b8342a72d883f532870d55312",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "a",
+            "article_url": "https://example.org/a",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "summary-external.xml",
+      "sha256": "183502532549c19e16fc538380f267f3ea05880a7363d010c0a00fd49ef965ff",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "external_content_not_loaded"
+          }
+        ]
+      }
+    },
+    {
+      "file": "summary-binary.xml",
+      "sha256": "0cf4d6172b196f8d58784793ebf8a427230f92dd38352274c74a972c28500cf8",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_text_type"
+          }
+        ]
+      }
+    },
+    {
+      "file": "summary-duplicate-content.xml",
+      "sha256": "07a965a60e1a0286c44be6070bfd2bba06216370ccf3e2672528b8ddcf907669",
+      "expected": {
+        "error": "Repeated singleton field:"
+      }
+    },
+    {
+      "file": "summary-invalid-xhtml.xml",
+      "sha256": "653e06fdc2a2fc753eb655d6db95b03d53385206ce6303cd6c8738a291c9192f",
+      "expected": {
+        "error": "Atom XHTML requires one XHTML div"
+      }
+    },
+    {
+      "file": "summary-oversize-content.xml",
+      "sha256": "573bbd17da50f59347aacac59ca1ad49e474b0ebd16d825d4d6e7a6f6a64c505",
+      "expected": {
+        "error": "Entry field or excerpt length limit exceeded"
+      }
+    },
+    {
+      "file": "rss-hidden-dc-title.xml",
+      "sha256": "0dc4684bc082d410aee34c59caed896749af0d06410c1e1e3ba45bb49f9f7118",
+      "expected": {
+        "records": [
+          {
+            "identity": "rss:urn:test:1",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_rss_extension"
+          }
+        ]
+      }
+    },
+    {
+      "file": "rss-hidden-dc-date.xml",
+      "sha256": "a9113635156d832d69a1d0e800952dbc2c38534037e27221a9e0d31f215d2196",
+      "expected": {
+        "records": [
+          {
+            "identity": "rss:urn:test:1",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_rss_extension"
+          }
+        ]
+      }
+    },
+    {
+      "file": "rss-hidden-content-encoded.xml",
+      "sha256": "c56f71299399ce5356b0d1accd277a99fda7e580c8f80501a459da4b8ba9efbd",
+      "expected": {
+        "records": [
+          {
+            "identity": "rss:urn:test:1",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_content_encoded"
+          }
+        ]
+      }
+    },
+    {
+      "file": "unicode-date.xml",
+      "sha256": "e5223df9cd8885af44998ef265518da77543635734e26ce98c17d10efbe1254f",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:urn:test:1",
+            "title": "日本語 café 🌱",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "2026-10-05T09:30:00+02:00",
+              "utc": "2026-10-05T07:30:00Z"
+            },
+            "updated": {
+              "raw": "2026-10-05T10:00:00Z",
+              "utc": "2026-10-05T10:00:00Z"
+            }
+          }
+        ],
+        "issues": []
+      }
+    }
+  ]
+}

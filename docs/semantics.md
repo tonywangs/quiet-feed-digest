@@ -12,16 +12,24 @@
   entity spelling can change. HTML is not rendered. XML entities such as
   `&amp;` decode normally; custom DTD entities are never allowed.
 * Out-of-line Atom content is not loaded. Other Atom text MIME types are not
-  decoded. These cases record issues and make the comparison incomplete.
-* RSS `content:encoded` without a description is explicitly reported as
-  unsupported. If a description is present, only that description is used.
+  decoded. These cases record issues and make the comparison incomplete, even
+  when a summary is displayed. Content singleton, XHTML structure, and excerpt
+  bounds are checked regardless of summary precedence.
+* RSS `content:encoded` is explicitly reported as unsupported even when a
+  description is present. Dublin Core `title`, `description`, `date`, and
+  `identifier` also mark the analysis incomplete; their values are not guessed
+  into core fields. A description remains the displayed excerpt.
 * Multiple Atom alternate links are ambiguous here, even if they have different
   language/type attributes. They produce an issue and no selected link. The ID
   can still match the entry. No alternate link is guessed.
-* Relative links, non-ASCII IRIs and `xml:base` resolution are unsupported. The
-  original link remains in JSON and HTML text; it cannot be clicked or used as
-  a fallback identity. A GUID/ID still allows comparison. Supply an ASCII URI
-  (punycode host and percent-encoded path) if needed.
+* Atom article links resolve relative `href` values through `xml:base` on the
+  feed, entry, and link. Only `article_url` changes: original `link` and IDs stay
+  verbatim. A safe absolute HTTP(S) base must come from XML, never a local
+  filename. Unresolved relative Atom links mark analysis incomplete. Relative
+  hrefs never become fallback identities, even when navigation can resolve them.
+  RSS relative links and non-ASCII IRIs remain non-clickable. Embedded markup
+  links are literal text and are not rewritten. Supply an ASCII URI (punycode
+  host and percent-encoded path) if needed.
 * RSS 0.9/1.x/RDF, Atom 0.3, JSON Feed, standalone Atom entries, malformed XML,
   DTDs, repeated supported singleton fields, and unexpected nested markup in
   plain fields are fatal input errors. XML encodings supported by Expat are
@@ -40,8 +48,9 @@ In JSON the identity kind is prefixed as `atom:`, `rss:` or `link:`; the feed ID
 is separate. Nonblank ID/GUID wins over the article link. Whitespace is preserved
 in nonblank identifiers, and no case folding or Unicode normalization occurs.
 Whitespace-only IDs count as missing. RSS/Atom format changes can change the
-identity kind. Exact-link fallback requires the same URL safety policy used for
-reader links; there is no URL canonicalization. No title/excerpt matching occurs.
+identity kind. Exact-link fallback requires a safe absolute original URL; resolving an Atom
+article link does not change this identity-version-1 rule. There is no identity
+URL canonicalization. No title/excerpt matching occurs.
 
 For each snapshot, identical duplicates collapse, with occurrence warnings.
 A duplicate identity with any different supported field is conflicting.

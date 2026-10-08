@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/kurtmckee/feedparser",
+  "commit": "6cdc20849a66c29e2d08b0334fceb22f210bdb26",
+  "license": "BSD-2-Clause; see FIXTURE-LICENSE",
+  "authors": "Kurt McKee, Mark Pilgrim and feedparser contributors",
+  "selection": "Purposive named regression cases: Atom identity case/escaping, text/content/links/namespaces/base; RSS GUID/text/dates/extensions; malformed XML. Not random, not representative live feeds. Exact selection is this manifest. Expectations hand-transcribed from fixture text and documented Quiet Feed semantics, never from production parser output. Upstream Expect comments are data, never evaluated.",
+  "fixtures": [
+    {
+      "file": "wellformed-atom10--entry_id.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_id.xml",
+      "sha256": "554eea5b29125c15bee4d13146cddc31ccd9eaf053d2ec94af4b73ba1bbbbe25",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:http://example.com/",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_id_no_normalization_1.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_id_no_normalization_1.xml",
+      "sha256": "24e219333b4e48fe115f1293eb235e63b16246855fb2bc81767d9dda316f83c5",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:http://www.example.org/thing",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_id_no_normalization_2.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_id_no_normalization_2.xml",
+      "sha256": "29eb96a414dde25cae8777c22b977a9b3848a093340745ef2c891c5e632fc56a",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:http://www.example.org/Thing",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_id_no_normalization_7.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_id_no_normalization_7.xml",
+      "sha256": "eadef8c4e70e32e219f3dedc3b3bfeaf407ef8b30941993175015e700a3d900f",
+      "expected": {
+        "records": [
+          {
+            "identity": "atom:http://www.example.com/%7Ebob",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_title.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_title.xml",
+      "sha256": "c451a5d13af17a57cd0b6d5ae8e6303b1c3c9c19692df32a1e58f95f35cc8e10",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "Example Atom",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_title_escaped_markup.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_title_escaped_markup.xml",
+      "sha256": "46ca07e714c485c711ee0aeda8fa0ce564881c2df5897104579df9b6046295e6",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "Example <b>Atom</b>",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_title_text_plain_brackets.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_title_text_plain_brackets.xml",
+      "sha256": "b861d9b2e679c2a886cdb94eb3ed5ee0657c8aa963a91045090659381c7b1aab",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "History of the <blink> tag",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_summary.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_summary.xml",
+      "sha256": "dcf0f8aa35a906b9c4ac1fdd2f32dce2c1b803c39b3107af525cb7ef26f3b844",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "summary",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_summary_escaped_markup.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_summary_escaped_markup.xml",
+      "sha256": "cf61522c80ce2e352c8c13884553f7f9a630fa70869fe8e9904fecc05b986e45",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Example <b>Atom</b>",
+            "excerpt_kind": "summary",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_content_and_summary.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_content_and_summary.xml",
+      "sha256": "8f812b0b52e9bb99863f71b01c35cdb6d1cc57fbc25be5d1038ce585111c44a3",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Summary",
+            "excerpt_kind": "summary",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_content_text_plain.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_content_text_plain.xml",
+      "sha256": "3e610803f1306f34a4cba3924a179fea2447443c1bd64c203d6f90a78f98611a",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_content_type_text.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_content_type_text.xml",
+      "sha256": "8d75838d0408be167995c515fcf27bfbd9599a11477b68f366dc28e2a43f1591",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Example Atom",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_content_src.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_content_src.xml",
+      "sha256": "4419fe7678c50ac104719afa40d577d9631161b966b5a49fad8f68f9f1a05828",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "external_content_not_loaded"
+          },
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_content_base64.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_content_base64.xml",
+      "sha256": "69eb7437f36461e9e55c5288124d9e4ffcbbbc397bdd516d24bcb3fac91c8575",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_text_type"
+          },
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_link_no_rel.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_link_no_rel.xml",
+      "sha256": "9a897c9207d5e2a8693f7a0b4709994effd3b608b201f07fad5124c92f33ef4f",
+      "expected": {
+        "records": [
+          {
+            "identity": "link:http://www.example.com/",
+            "title": "",
+            "link": "http://www.example.com/",
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_link_multiple.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_link_multiple.xml",
+      "sha256": "595d6ac46a27a25749f3ab6d263486a0eed98b36c927115910e62048bad63ce1",
+      "expected": {
+        "records": [
+          {
+            "identity": "link:http://www.example.com/",
+            "title": "",
+            "link": "http://www.example.com/",
+            "article_url": "http://www.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_link_rel_enclosure.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_link_rel_enclosure.xml",
+      "sha256": "cebfddb18a8421da0d2725590c6ad08469e2fd27546a9f09937c4b7ae629fe14",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_category_term_non_ascii.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_category_term_non_ascii.xml",
+      "sha256": "d4531bfefee26a5d008999988150e54d3ca63bbf745aceb88130f74e5edfb0c6",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-atom10--atom10_namespace.xml",
+      "upstream_path": "tests/wellformed/atom10/atom10_namespace.xml",
+      "sha256": "03c36792cbe8beeef33dbc54ce5d564f78ad57ae395664032f8d8910a10368db",
+      "expected": {
+        "records": [],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--entry_content_application_xml.xml",
+      "upstream_path": "tests/wellformed/atom10/entry_content_application_xml.xml",
+      "sha256": "833e3a5dd7d374820432624e69c8daaa358870d5a9d0dcc92cd8fab45a770cf8",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "<html:div xmlns:html=\"http://www.w3.org/1999/xhtml\">Example <html:b>Atom</html:b></html:div>",
+            "excerpt_kind": "content",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_guid.xml",
+      "upstream_path": "tests/wellformed/rss/item_guid.xml",
+      "sha256": "93a462c13f78dea3bedcd59fa5a17f52ffc9b4808767274abfb1e9b7f877865b",
+      "expected": {
+        "records": [
+          {
+            "identity": "rss:http://guid.example.com/",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-rss--item_guid_not_permalink.xml",
+      "upstream_path": "tests/wellformed/rss/item_guid_not_permalink.xml",
+      "sha256": "90e063de19e1e0c8c3d79b1fe5dc79b2df0661d6a57558a8c804f63cc90dad6e",
+      "expected": {
+        "records": [
+          {
+            "identity": "rss:http://guid.example.com/",
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-rss--item_guid_conflict_link.xml",
+      "upstream_path": "tests/wellformed/rss/item_guid_conflict_link.xml",
+      "sha256": "59fa9ee531bd40497beb38b93130d6c9fa74e29e45794079fa1d68c0ed61033d",
+      "expected": {
+        "records": [
+          {
+            "identity": "rss:http://guid.example.com/",
+            "title": "",
+            "link": "http://link.example.com/",
+            "article_url": "http://link.example.com/",
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-rss--item_title.xml",
+      "upstream_path": "tests/wellformed/rss/item_title.xml",
+      "sha256": "dd387d07058a114320e55ee24c535636bfa06a3d2ec55cd2e8e20c84d8b65db4",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "Item 1 title",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_description.xml",
+      "upstream_path": "tests/wellformed/rss/item_description.xml",
+      "sha256": "bd34b1f526616b2bb3444bcf098102c811408fdf75f3b43b0ec5e243ad956caa",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "Example description",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_description_escaped_markup.xml",
+      "upstream_path": "tests/wellformed/rss/item_description_escaped_markup.xml",
+      "sha256": "b6459a93274b0d9e4de4ee3402e300d6200c914706ec2da1e0e4ad8cb826eaca",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "<p>Example description</p>",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_pubDate_map_updated_parsed.xml",
+      "upstream_path": "tests/wellformed/rss/item_pubDate_map_updated_parsed.xml",
+      "sha256": "215e2899220655c4903efe29e64030e0fee5ae635f383567646e688e4d47bdcd",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "Thu, 01 Jan 2004 19:48:21 GMT",
+              "utc": "2004-01-01T19:48:21Z"
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_dc_date.xml",
+      "upstream_path": "tests/wellformed/rss/item_dc_date.xml",
+      "sha256": "9924056148d10ebcb6e9ceb459876c4a6e3c98940318885e88c14b4f224a31a2",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_rss_extension"
+          },
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_dc_title.xml",
+      "upstream_path": "tests/wellformed/rss/item_dc_title.xml",
+      "sha256": "28fd9687f068c30fe9a0be01a5bfc8ab6b97590497f5115e7d7cb28772329a76",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_rss_extension"
+          },
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "wellformed-rss--item_description_naked_markup.xml",
+      "upstream_path": "tests/wellformed/rss/item_description_naked_markup.xml",
+      "sha256": "90c8a81b711f7a4e4fc604a9337070615d8722823186019aad52dd0b579709f8",
+      "expected": {
+        "error": "Nested markup requires Atom XHTML text type"
+      }
+    },
+    {
+      "file": "wellformed-rss--item_content_encoded.xml",
+      "upstream_path": "tests/wellformed/rss/item_content_encoded.xml",
+      "sha256": "67bc9b9c4a68cb21d21116b219c5f7fef5f8aab21c2b4d8ffd8c4bcb996654ce",
+      "expected": {
+        "records": [
+          {
+            "identity": null,
+            "title": "",
+            "link": "",
+            "article_url": null,
+            "excerpt": "",
+            "excerpt_kind": "description",
+            "published": {
+              "raw": "",
+              "utc": null
+            },
+            "updated": {
+              "raw": "",
+              "utc": null
+            }
+          }
+        ],
+        "issues": [
+          {
+            "entry": 1,
+            "code": "unsupported_content_encoded"
+          },
+          {
+            "entry": 1,
+            "code": "missing_identity"
+          }
+        ]
+      }
+    },
+    {
+      "file": "illformed--aaa_illformed.xml",
+      "upstream_path": "tests/illformed/aaa_illformed.xml",
+      "sha256": "ebcd316372fde0c4b8577f41341ac005ed1da9905ea7bb6ffa5211d10af77146",
+      "expected": {
+        "error": "Malformed XML:"
+      }
+    },
+    {
+      "file": "illformed--undeclared_namespace.xml",
+      "upstream_path": "tests/illformed/undeclared_namespace.xml",
+      "sha256": "317f406152fcf5ee728396cab522f396f911af8bdc228f7d92bdc0ca80caec26",
+      "expected": {
+        "error": "Malformed XML:"
+      }
+    },
+    {
+      "file": "wellformed-atom10--relative_uri.xml",
+      "upstream_path": "tests/wellformed/atom10/relative_uri.xml",
+      "sha256": "a0c41c446c60d1f1cb447bae108722250f826b5cb1c74e591424010059dfa238",
+      "expected": {
+        "records": [],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--relative_uri_inherit.xml",
+      "upstream_path": "tests/wellformed/atom10/relative_uri_inherit.xml",
+      "sha256": "95db2e85450649253ece7c698cec341b960b0092263e819b484532e65cd35ff7",
+      "expected": {
+        "records": [],
+        "issues": []
+      }
+    },
+    {
+      "file": "wellformed-atom10--relative_uri_inherit_2.xml",
+      "upstream_path": "tests/wellformed/atom10/relative_uri_inherit_2.xml",
+      "sha256": "0f030420e26dc31949f8d45d16f168875c5ad46ba3c5f303a8eb7c5b867b7423",
+      "expected": {
+        "records": [],
+        "issues": []
+      }
+    }
+  ]
+}

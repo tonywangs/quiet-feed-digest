@@ -1,0 +1,42 @@
+complete: 1 selected, 0 omitted; /tmp/tmpneh057i6/out
+incomplete: 0 selected, 0 omitted; /tmp/tmpneh057i6/incomplete
+test_240_seeded_pairs_against_pinned_reader (tests.test_compatibility.CompatibilityTests.test_240_seeded_pairs_against_pinned_reader) ... /var/lib/dailybuilder/projects/quiet-feed-digest/audit/vendor/feedparser/util.py:80: DeprecationWarning: To avoid breaking existing software while fixing issue 310, a temporary mapping has been created from `updated` to `published` if `updated` doesn't exist. This fallback will be removed in a future version of feedparser.
+  warnings.warn(
+/var/lib/dailybuilder/projects/quiet-feed-digest/audit/vendor/feedparser/util.py:95: DeprecationWarning: To avoid breaking existing software while fixing issue 310, a temporary mapping has been created from `updated_parsed` to `published_parsed` if `updated_parsed` doesn't exist. This fallback will be removed in a future version of feedparser.
+  warnings.warn(
+ok
+test_base_resolution_keeps_identity_and_raw_href (tests.test_compatibility.CompatibilityTests.test_base_resolution_keeps_identity_and_raw_href) ... ok
+test_bases_and_hidden_content_remain_bounded (tests.test_compatibility.CompatibilityTests.test_bases_and_hidden_content_remain_bounded) ... ok
+test_frozen_corpus_and_explicit_outcomes (tests.test_compatibility.CompatibilityTests.test_frozen_corpus_and_explicit_outcomes) ... ok
+test_unsupported_cases_propagate_incomplete_and_never_fetch (tests.test_compatibility.CompatibilityTests.test_unsupported_cases_propagate_incomplete_and_never_fetch) ... ok
+test_240_seeded_pairs_against_independent_oracle (tests.test_digest.DigestTests.test_240_seeded_pairs_against_independent_oracle) ... ok
+test_atom_xhtml_is_literal (tests.test_digest.DigestTests.test_atom_xhtml_is_literal) ... ok
+test_byte_total_and_entry_limits (tests.test_digest.DigestTests.test_byte_total_and_entry_limits) ... ok
+test_cli_serialization_failure_cancel_timeout_and_exit_codes (tests.test_digest.DigestTests.test_cli_serialization_failure_cancel_timeout_and_exit_codes) ... Error: serialization failed
+Cancelled; no completed report produced.
+Error: Processing time limit exceeded
+Error: [Errno 17] File exists: '/tmp/tmpneh057i6/out'
+ok
+test_concurrent_output_reservation (tests.test_digest.DigestTests.test_concurrent_output_reservation) ... ok
+test_date_only_revision_and_offset_equivalence (tests.test_digest.DigestTests.test_date_only_revision_and_offset_equivalence) ... ok
+test_empty_valid_snapshots_are_distinct_from_malformed (tests.test_digest.DigestTests.test_empty_valid_snapshots_are_distinct_from_malformed) ... ok
+test_exact_links_and_ids_are_not_normalized (tests.test_digest.DigestTests.test_exact_links_and_ids_are_not_normalized) ... ok
+test_example_core_workflow (tests.test_digest.DigestTests.test_example_core_workflow) ... ok
+test_fifo_and_symlink_escape_rejected (tests.test_digest.DigestTests.test_fifo_and_symlink_escape_rejected) ... ok
+test_hostile_html_is_inert (tests.test_digest.DigestTests.test_hostile_html_is_inert) ... ok
+test_id_is_feed_scoped_and_guid_is_not_url (tests.test_digest.DigestTests.test_id_is_feed_scoped_and_guid_is_not_url) ... ok
+test_identical_duplicates_collapse (tests.test_digest.DigestTests.test_identical_duplicates_collapse) ... ok
+test_invalid_date_preserved (tests.test_digest.DigestTests.test_invalid_date_preserved) ... ok
+test_manifest_and_window_errors (tests.test_digest.DigestTests.test_manifest_and_window_errors) ... ok
+test_missing_and_conflicting_identity_never_guessed (tests.test_digest.DigestTests.test_missing_and_conflicting_identity_never_guessed) ... ok
+test_output_collision_and_cleanup (tests.test_digest.DigestTests.test_output_collision_and_cleanup) ... ok
+test_sigterm_cleanup_during_write (tests.test_digest.DigestTests.test_sigterm_cleanup_during_write) ... ok
+test_unsupported_atom_content_is_explicit (tests.test_digest.DigestTests.test_unsupported_atom_content_is_explicit) ... ok
+test_url_policy (tests.test_digest.DigestTests.test_url_policy) ... ok
+test_xml_limits_and_ambiguous_fields (tests.test_digest.DigestTests.test_xml_limits_and_ambiguous_fields) ... ok
+test_xml_rejects_dtd_entities_and_unsupported_formats (tests.test_digest.DigestTests.test_xml_rejects_dtd_entities_and_unsupported_formats) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 10.472s
+
+OK

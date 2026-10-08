@@ -1,0 +1,28 @@
+{
+  "chromium": "149.0.7827.55",
+  "playwright": "1.61.1",
+  "node": "v24.20.0",
+  "automatic_remote_requests": 0,
+  "blocked_user_navigation": [
+    "https://example.org/corpus/story"
+  ],
+  "article_hrefs": [
+    "http://link.example.com/",
+    "http://link.example.com/",
+    "http://link.example.com/",
+    "https://example.org/corpus/story"
+  ],
+  "page_errors": [],
+  "checks": [
+    "source filtering",
+    "revision filtering",
+    "before/after text",
+    "Enter and Space disclosure",
+    "Tab navigation",
+    "hostile markup inert",
+    "validated resolved article links",
+    "blocked article navigation",
+    "320px viewport"
+  ],
+  "external_networking": "offline context; service workers blocked; route permits only report file"
+}
